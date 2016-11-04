@@ -17,6 +17,8 @@
 		A18E7CF31DCCFCB300EEC7F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A18E7CF11DCCFCB300EEC7F3 /* LaunchScreen.storyboard */; };
 		A18E7CFE1DCCFCB300EEC7F3 /* mazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18E7CFD1DCCFCB300EEC7F3 /* mazeTests.swift */; };
 		A18E7D091DCCFCB400EEC7F3 /* mazeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18E7D081DCCFCB400EEC7F3 /* mazeUITests.swift */; };
+		A1CBFC681DCD514B00E788AF /* LLPIXEL3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1CBFC671DCD514B00E788AF /* LLPIXEL3.ttf */; };
+		A1CBFC6A1DCD517A00E788AF /* marble.png in Resources */ = {isa = PBXBuildFile; fileRef = A1CBFC691DCD517A00E788AF /* marble.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		A18E7D041DCCFCB400EEC7F3 /* mazeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mazeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18E7D081DCCFCB400EEC7F3 /* mazeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mazeUITests.swift; sourceTree = "<group>"; };
 		A18E7D0A1DCCFCB400EEC7F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1CBFC671DCD514B00E788AF /* LLPIXEL3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLPIXEL3.ttf; sourceTree = "<group>"; };
+		A1CBFC691DCD517A00E788AF /* marble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marble.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +107,14 @@
 		A18E7CE11DCCFCB300EEC7F3 /* maze */ = {
 			isa = PBXGroup;
 			children = (
+				A1CBFC671DCD514B00E788AF /* LLPIXEL3.ttf */,
 				A18E7CE21DCCFCB300EEC7F3 /* AppDelegate.swift */,
 				A18E7CE41DCCFCB300EEC7F3 /* GameScene.sks */,
 				A18E7CE61DCCFCB300EEC7F3 /* Actions.sks */,
 				A18E7CE81DCCFCB300EEC7F3 /* GameScene.swift */,
 				A18E7CEA1DCCFCB300EEC7F3 /* GameViewController.swift */,
 				A18E7CEC1DCCFCB300EEC7F3 /* Main.storyboard */,
+				A1CBFC691DCD517A00E788AF /* marble.png */,
 				A18E7CEF1DCCFCB300EEC7F3 /* Assets.xcassets */,
 				A18E7CF11DCCFCB300EEC7F3 /* LaunchScreen.storyboard */,
 				A18E7CF41DCCFCB300EEC7F3 /* Info.plist */,
@@ -243,8 +249,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18E7CEE1DCCFCB300EEC7F3 /* Main.storyboard in Resources */,
+				A1CBFC681DCD514B00E788AF /* LLPIXEL3.ttf in Resources */,
 				A18E7CE51DCCFCB300EEC7F3 /* GameScene.sks in Resources */,
 				A18E7CF01DCCFCB300EEC7F3 /* Assets.xcassets in Resources */,
+				A1CBFC6A1DCD517A00E788AF /* marble.png in Resources */,
 				A18E7CF31DCCFCB300EEC7F3 /* LaunchScreen.storyboard in Resources */,
 				A18E7CE71DCCFCB300EEC7F3 /* Actions.sks in Resources */,
 			);
