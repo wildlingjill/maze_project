@@ -9,6 +9,7 @@
 import SpriteKit
 // import GameplayKit
 import CoreMotion
+import MyVariables
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
@@ -68,7 +69,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             print(score)
             scoreLabel.text = String(score)
             
-            let alertController = UIAlertController(title: "Wrong", message: "Too high", preferredStyle: .alert)
+            let alert = UIAlertController(title: "My Title", message: "This is my message.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            // show the alert
+            MyVariables.viewController.present(alert, animated: true, completion: nil)
             
         }
     }
