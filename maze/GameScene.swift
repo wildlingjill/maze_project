@@ -19,7 +19,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var endNode = SKSpriteNode()
     var score:Int = 0
     var scoreLabel = SKLabelNode()
-    var second:Double? = 60.0
+    var second:Double? = 10.0
     var timerLabel = SKLabelNode()
     var levelTimer = Timer()
     
@@ -34,7 +34,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel = self.childNode(withName: "scoreLabel") as! SKLabelNode
         timerLabel = self.childNode(withName: "timerLabel") as! SKLabelNode
         
-        levelTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: "increaseTimer", userInfo: nil, repeats: true)
+        levelTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: "increaseTimer", userInfo: nil, repeats: true)
         
         
         
@@ -49,9 +49,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func increaseTimer(){
-        second = second! - 0.5
-        print(second)
-        timerLabel.text = String(describing: second!)
+        if second! >= 1.0{
+            second = second! - 1.0
+            print(second)
+            timerLabel.text = String(describing: second!)
+        }
+        
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -64,8 +67,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             score += 1
             print(score)
             scoreLabel.text = String(score)
-            
-        
             
             let alertController = UIAlertController(title: "Wrong", message: "Too high", preferredStyle: .alert)
             
