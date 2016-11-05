@@ -436,7 +436,7 @@
 				DEVELOPMENT_TEAM = LVA22MYZ28;
 				INFOPLIST_FILE = maze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "minhpn.org.ec1-gmail.com";
+				PRODUCT_BUNDLE_IDENTIFIER = minhpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0.1;
 			};
@@ -449,7 +449,7 @@
 				DEVELOPMENT_TEAM = LVA22MYZ28;
 				INFOPLIST_FILE = maze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "minhpn.org.ec1-gmail.com";
+				PRODUCT_BUNDLE_IDENTIFIER = minhpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0.1;
 			};

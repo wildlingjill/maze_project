@@ -36,8 +36,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         levelTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: "increaseTimer", userInfo: nil, repeats: true)
         
-        
-        
         manager.startAccelerometerUpdates()
         manager.accelerometerUpdateInterval = 0.1
         // grabs data from accelerometer every 0.1s, runs next line
@@ -60,18 +58,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if bodyA.categoryBitMask == 1 && bodyB.categoryBitMask == 2 || bodyA.categoryBitMask == 2 && bodyB.categoryBitMask == 1 {
             // endscene
+            
             print("You Won!")
             score += 1
+            
             print(score)
             scoreLabel.text = String(score)
-            
-        
-            
-            let alertController = UIAlertController(title: "Wrong", message: "Too high", preferredStyle: .alert)
-            
+
         }
     }
-    
     
     override func update(_ currentTime: CFTimeInterval) {
         // Called before each frame is rendered
