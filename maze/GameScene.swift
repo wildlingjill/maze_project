@@ -39,12 +39,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     func didBegin(_ contact: SKPhysicsContact) {
-        let bodyA = contact.bodyA
-        let bodyB = contact.bodyB
+        var bodyA = contact.bodyA
+        var bodyB = contact.bodyB
         
         if bodyA.categoryBitMask == 1 && bodyB.categoryBitMask == 2 || bodyA.categoryBitMask == 2 && bodyB.categoryBitMask == 1 {
             // endscene
             print("You Won!")
+            // create the alert
+            let alert = UIAlertController(title: "Game over", message: "You won!", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
         }
     }
     

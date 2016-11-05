@@ -208,7 +208,7 @@
 				TargetAttributes = {
 					A18E7CDE1DCCFCB300EEC7F3 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = LVA22MYZ28;
+						DevelopmentTeam = FHH46B7K47;
 						ProvisioningStyle = Automatic;
 					};
 					A18E7CF81DCCFCB300EEC7F3 = {
@@ -433,10 +433,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LVA22MYZ28;
+				DEVELOPMENT_TEAM = FHH46B7K47;
 				INFOPLIST_FILE = maze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "minhpn.org.ec1-gmail.com";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jillrobinson.maze-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0.1;
 			};
@@ -446,10 +446,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LVA22MYZ28;
+				DEVELOPMENT_TEAM = FHH46B7K47;
 				INFOPLIST_FILE = maze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "minhpn.org.ec1-gmail.com";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jillrobinson.maze-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0.1;
 			};
