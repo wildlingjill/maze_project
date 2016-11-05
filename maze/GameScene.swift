@@ -9,7 +9,6 @@
 import SpriteKit
 // import GameplayKit
 import CoreMotion
-import MyVariables
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
@@ -68,17 +67,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if bodyA.categoryBitMask == 1 && bodyB.categoryBitMask == 2 || bodyA.categoryBitMask == 2 && bodyB.categoryBitMask == 1 {
             // endscene
             print("You Won!")
-            score += 1
+            if second! >= 1.0 {
+                score += 1
+            }
+            
             print(score)
             scoreLabel.text = String(score)
             
-            let alert = UIAlertController(title: "My Title", message: "This is my message.", preferredStyle: UIAlertControllerStyle.alert)
-            
-            // add an action (button)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            
-            // show the alert
-            MyVariables.viewController.present(alert, animated: true, completion: nil)
+           
             
         }
     }

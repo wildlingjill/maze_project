@@ -73,14 +73,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Current High Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgW-Z2-IKU">
-                                <rect key="frame" x="83" y="271" width="208" height="24"/>
-                                <fontDescription key="fontDescription" name="LLPixel" family="LLPixel" pointSize="20"/>
-                                <color key="textColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="High score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQH-Tn-vLj">
-                                <rect key="frame" x="140" y="303" width="94" height="33"/>
-                                <fontDescription key="fontDescription" name="LLPixel" family="LLPixel" pointSize="17"/>
+                                <rect key="frame" x="47" y="289" width="280" height="24"/>
+                                <fontDescription key="fontDescription" name="LLPixel" family="LLPixel" pointSize="26"/>
                                 <color key="textColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -94,19 +88,25 @@
                                     <segue destination="BV1-FR-VrT" kind="show" id="V0y-qI-c2r"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Jill: 32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQH-Tn-vLj">
+                                <rect key="frame" x="83" y="321" width="208" height="85"/>
+                                <fontDescription key="fontDescription" name="LLPixel" family="LLPixel" pointSize="47"/>
+                                <color key="textColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="TgW-Z2-IKU" firstAttribute="centerX" secondItem="FVD-l9-3Q0" secondAttribute="centerX" id="20P-gJ-GAl"/>
+                            <constraint firstItem="TgW-Z2-IKU" firstAttribute="top" secondItem="czb-Pw-Vki" secondAttribute="bottom" constant="70" id="AgV-Df-wQZ"/>
                             <constraint firstItem="czb-Pw-Vki" firstAttribute="centerX" secondItem="FVD-l9-3Q0" secondAttribute="centerX" id="BSy-7b-o5N"/>
                             <constraint firstItem="8JO-sf-Yrt" firstAttribute="centerX" secondItem="FVD-l9-3Q0" secondAttribute="centerX" id="CIj-vi-Oim"/>
-                            <constraint firstItem="TgW-Z2-IKU" firstAttribute="centerX" secondItem="FVD-l9-3Q0" secondAttribute="centerX" id="LIj-Bn-dnu"/>
                             <constraint firstItem="0cx-zL-Keq" firstAttribute="centerX" secondItem="FVD-l9-3Q0" secondAttribute="centerX" id="MyQ-Iq-qpf"/>
                             <constraint firstItem="4Xb-Gz-cdU" firstAttribute="top" secondItem="0cx-zL-Keq" secondAttribute="bottom" constant="67" id="cvK-gi-DNr"/>
-                            <constraint firstItem="HQH-Tn-vLj" firstAttribute="centerX" secondItem="FVD-l9-3Q0" secondAttribute="centerX" id="nmd-So-uT8"/>
-                            <constraint firstItem="TgW-Z2-IKU" firstAttribute="top" secondItem="czb-Pw-Vki" secondAttribute="bottom" constant="52" id="rHL-uM-YjQ"/>
+                            <constraint firstItem="HQH-Tn-vLj" firstAttribute="top" secondItem="TgW-Z2-IKU" secondAttribute="bottom" constant="8" id="hos-Pl-z4b"/>
                             <constraint firstItem="8JO-sf-Yrt" firstAttribute="top" secondItem="a8b-ce-83f" secondAttribute="bottom" constant="8" symbolic="YES" id="sVv-EZ-9uB"/>
-                            <constraint firstItem="HQH-Tn-vLj" firstAttribute="top" secondItem="TgW-Z2-IKU" secondAttribute="bottom" constant="8" symbolic="YES" id="uXG-iE-d5K"/>
                             <constraint firstItem="czb-Pw-Vki" firstAttribute="top" secondItem="8JO-sf-Yrt" secondAttribute="bottom" constant="8" symbolic="YES" id="wq6-Wg-RHY"/>
+                            <constraint firstItem="HQH-Tn-vLj" firstAttribute="centerX" secondItem="FVD-l9-3Q0" secondAttribute="centerX" id="yFu-VZ-LTc"/>
                         </constraints>
                     </view>
                 </viewController>
