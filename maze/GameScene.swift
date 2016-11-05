@@ -34,6 +34,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel = self.childNode(withName: "scoreLabel") as! SKLabelNode
         timerLabel = self.childNode(withName: "timerLabel") as! SKLabelNode
         
+        player.scale(to: CGSize(width: 100, height: 100))
+
+        
         levelTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: "increaseTimer", userInfo: nil, repeats: true)
         
         
@@ -73,6 +76,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+       player.scale(to: CGSize(width: 50, height: 50))
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        player.scale(to: CGSize(width: 100, height: 100))
+
+    }
+
+
     
     override func update(_ currentTime: CFTimeInterval) {
         // Called before each frame is rendered
