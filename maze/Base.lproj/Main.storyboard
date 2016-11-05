@@ -27,10 +27,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7T-F2-ukb">
-                                <rect key="frame" x="124" y="28" width="151" height="30"/>
+                                <rect key="frame" x="139" y="-2" width="151" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Start Over"/>
+                                <fontDescription key="fontDescription" name="LLPixel" family="LLPixel" pointSize="21"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="pzO-lI-tLO" kind="show" id="cUc-l6-rge"/>
                                 </connections>
@@ -41,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="589.60000000000002" y="145.27736131934034"/>
+            <point key="canvasLocation" x="610" y="145"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OuI-YF-7nZ">
