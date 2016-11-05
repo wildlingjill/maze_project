@@ -11,28 +11,8 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    
 
-    
-    
-    
-    @IBAction func resetButton(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "Wrong", message: "Too low", preferredStyle: .alert)
-        alertController.view.tintColor = UIColor.red
-        
-        let OKAction = UIAlertAction(title: "Play again", style: .default) { (action:UIAlertAction!) in
-            
-            // Code in this block will trigger when OK button tapped.
-            print("Ok button tapped");
-            
-            
-        }
-        
-        alertController.addAction(OKAction)
-        
-        self.present(alertController, animated: true, completion:nil)
-
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
