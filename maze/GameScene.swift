@@ -17,6 +17,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let manager = CMMotionManager()
     var player = SKSpriteNode()
     var endNode = SKSpriteNode()
+    var score:Int = 0
+    var scoreLabel = SKLabelNode()
+    var second:Double? = 10.0
+    var timerLabel = SKLabelNode()
+    var levelTimer = Timer()
     
     override func didMove(to view: SKView) {
         
@@ -26,6 +31,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         endNode = self.childNode(withName: "endNode") as! SKSpriteNode
         
+        scoreLabel = self.childNode(withName: "scoreLabel") as! SKLabelNode
+        timerLabel = self.childNode(withName: "timerLabel") as! SKLabelNode
+        
+        levelTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: "increaseTimer", userInfo: nil, repeats: true)
+        
+        
+        
         manager.startAccelerometerUpdates()
         manager.accelerometerUpdateInterval = 0.1
         // grabs data from accelerometer every 0.1s, runs next line
@@ -34,9 +46,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             self.physicsWorld.gravity = CGVector(dx: CGFloat((data?.acceleration.x)! * 10), dy: CGFloat((data?.acceleration.y)! * 10))
         }
-        
     }
     
+    func increaseTimer(){
+        if second! >= 1.0{
+            second = second! - 1.0
+            print(second)
+            timerLabel.text = String(describing: second!)
+        }
+        
+    }
     
     func didBegin(_ contact: SKPhysicsContact) {
         var bodyA = contact.bodyA
@@ -45,8 +64,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if bodyA.categoryBitMask == 1 && bodyB.categoryBitMask == 2 || bodyA.categoryBitMask == 2 && bodyB.categoryBitMask == 1 {
             // endscene
             print("You Won!")
-            // create the alert
-           
+            score += 1
+            print(score)
+            scoreLabel.text = String(score)
+            
+            let alertController = UIAlertController(title: "Wrong", message: "Too high", preferredStyle: .alert)
+            
         }
     }
     
