@@ -46,13 +46,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             // endscene
             print("You Won!")
             // create the alert
-            let alert = UIAlertController(title: "Game over", message: "You won!", preferredStyle: UIAlertControllerStyle.alert)
-            
-            // add an action (button)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            
-            // show the alert
-            self.present(alert, animated: true, completion: nil)
+           
         }
     }
     
