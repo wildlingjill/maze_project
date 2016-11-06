@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27ABA1701DCF046000D93326 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 27ABA16F1DCF046000D93326 /* heart.png */; };
 		A18E7CE31DCCFCB300EEC7F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18E7CE21DCCFCB300EEC7F3 /* AppDelegate.swift */; };
 		A18E7CE51DCCFCB300EEC7F3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A18E7CE41DCCFCB300EEC7F3 /* GameScene.sks */; };
 		A18E7CE71DCCFCB300EEC7F3 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A18E7CE61DCCFCB300EEC7F3 /* Actions.sks */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27ABA16F1DCF046000D93326 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		A18E7CDF1DCCFCB300EEC7F3 /* maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18E7CE21DCCFCB300EEC7F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A18E7CE41DCCFCB300EEC7F3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				A18E7CE81DCCFCB300EEC7F3 /* GameScene.swift */,
 				A18E7CEA1DCCFCB300EEC7F3 /* GameViewController.swift */,
 				A18E7CEC1DCCFCB300EEC7F3 /* Main.storyboard */,
+				27ABA16F1DCF046000D93326 /* heart.png */,
 				A1CBFC691DCD517A00E788AF /* marble.png */,
 				A18E7CEF1DCCFCB300EEC7F3 /* Assets.xcassets */,
 				A18E7CF11DCCFCB300EEC7F3 /* LaunchScreen.storyboard */,
@@ -248,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27ABA1701DCF046000D93326 /* heart.png in Resources */,
 				A18E7CEE1DCCFCB300EEC7F3 /* Main.storyboard in Resources */,
 				A1CBFC681DCD514B00E788AF /* LLPIXEL3.ttf in Resources */,
 				A18E7CE51DCCFCB300EEC7F3 /* GameScene.sks in Resources */,
