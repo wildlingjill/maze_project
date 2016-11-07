@@ -9,39 +9,57 @@
 import SpriteKit
 // import GameplayKit
 import CoreMotion
+import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
     let manager = CMMotionManager()
     var player = SKSpriteNode()
-    var heart_6 = SKSpriteNode()
+    var enemy = SKSpriteNode()
+    var enemy_2 = SKSpriteNode()
+    var enemy_3 = SKSpriteNode()
+    
     var heart_2 = SKSpriteNode()
     var heart_3 = SKSpriteNode()
     var heart_4 = SKSpriteNode()
     var heart_5 = SKSpriteNode()
+    var heart_6 = SKSpriteNode()
     
     var score:Int = 0
     var scoreLabel = SKLabelNode()
     var second:Double? = 30.0
     var timerLabel = SKLabelNode()
     var levelTimer = Timer()
+    var mode:String = ""
+    
+    var winLabel = SKLabelNode()
+    var loseLabel = SKLabelNode()
+    
+    var audioPlayer_theme = AVAudioPlayer()
+    var audioPlayer_lose = AVAudioPlayer()
     
     override func didMove(to view: SKView) {
 
         self.physicsWorld.contactDelegate = self
         
         player = self.childNode(withName: "player") as! SKSpriteNode
-        
-        heart_6 = self.childNode(withName: "heart_6") as! SKSpriteNode
+        enemy = self.childNode(withName: "enemy") as! SKSpriteNode
+        enemy_2 = self.childNode(withName: "enemy_2") as! SKSpriteNode
+        enemy_3 = self.childNode(withName: "enemy_3") as! SKSpriteNode
+
         heart_2 = self.childNode(withName: "heart_2") as! SKSpriteNode
         heart_3 = self.childNode(withName: "heart_3") as! SKSpriteNode
         heart_4 = self.childNode(withName: "heart_4") as! SKSpriteNode
         heart_5 = self.childNode(withName: "heart_5") as! SKSpriteNode
+        heart_6 = self.childNode(withName: "heart_6") as! SKSpriteNode
 
         scoreLabel = self.childNode(withName: "scoreLabel") as! SKLabelNode
         timerLabel = self.childNode(withName: "timerLabel") as! SKLabelNode
+        winLabel = self.childNode(withName: "winLabel") as! SKLabelNode
+        loseLabel = self.childNode(withName: "loseLabel") as! SKLabelNode
+        
+        winLabel.isHidden = true
+        loseLabel.isHidden = true
         
         player.scale(to: CGSize(width: 100, height: 100))
         
@@ -57,15 +75,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         var speed = sqrt(player.physicsBody!.velocity.dx * 2 + player.physicsBody!.velocity.dy * 2)
+        
+        do {
+            audioPlayer_theme = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "millionaire", ofType: "mp3")!))
+            audioPlayer_theme.prepareToPlay()
+        }
+        catch {
+            print(error)
+        }
+        
+        do {
+            audioPlayer_lose = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "smb_coin", ofType: "wav")!))
+            audioPlayer_lose.prepareToPlay()
+        }
+        catch {
+            print(error)
+        }
+        audioPlayer_theme.play()
     }
     
     func increaseTimer(){
         if second! >= 1.0{
             second = second! - 1.0
-            print(second)
             timerLabel.text = String(describing: second!)
         } else {
             player.physicsBody!.affectedByGravity = false
+            loseLabel.isHidden = false
+            audioPlayer_lose.play(atTime: 1.0)
+            audioPlayer_theme.stop()
         }
     }
     
@@ -81,6 +118,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 second = second! + 3.0
             }
         }
+        
+        if bodyA.categoryBitMask == 1 && bodyB.categoryBitMask == 7 || bodyA.categoryBitMask == 7 && bodyB.categoryBitMask == 1 {
+            winLabel.isHidden = false
+            audioPlayer_theme.stop()
+            player.physicsBody!.affectedByGravity = false
+
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -94,5 +138,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func update(_ currentTime: CFTimeInterval) {
         // Called before each frame is rendered
+        // if mode == "hard" {
+            enemy.run(SKAction.moveTo(x: player.position.x, duration: 1.0))
+            enemy_2.run(SKAction.moveTo(x: player.position.y, duration: 1.0))
+            enemy_3.run(SKAction.moveTo(y: player.position.x, duration: 1.0))
+        //}
+        
     }
 }

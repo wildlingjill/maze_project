@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275B63111DD05F6200C8525A /* millionaire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 275B63101DD05F6200C8525A /* millionaire.mp3 */; };
+		275B63131DD0607800C8525A /* smb_coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 275B63121DD0607800C8525A /* smb_coin.wav */; };
 		27ABA1701DCF046000D93326 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 27ABA16F1DCF046000D93326 /* heart.png */; };
 		A18E7CE31DCCFCB300EEC7F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18E7CE21DCCFCB300EEC7F3 /* AppDelegate.swift */; };
 		A18E7CE51DCCFCB300EEC7F3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A18E7CE41DCCFCB300EEC7F3 /* GameScene.sks */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		275B63101DD05F6200C8525A /* millionaire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = millionaire.mp3; sourceTree = "<group>"; };
+		275B63121DD0607800C8525A /* smb_coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = smb_coin.wav; path = ../../../../Desktop/smb_coin.wav; sourceTree = "<group>"; };
 		27ABA16F1DCF046000D93326 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		A18E7CDF1DCCFCB300EEC7F3 /* maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18E7CE21DCCFCB300EEC7F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,9 +120,11 @@
 				A18E7CE81DCCFCB300EEC7F3 /* GameScene.swift */,
 				A18E7CEA1DCCFCB300EEC7F3 /* GameViewController.swift */,
 				A18E7CEC1DCCFCB300EEC7F3 /* Main.storyboard */,
+				275B63101DD05F6200C8525A /* millionaire.mp3 */,
 				27ABA16F1DCF046000D93326 /* heart.png */,
 				A1CBFC691DCD517A00E788AF /* marble.png */,
 				A18E7CEF1DCCFCB300EEC7F3 /* Assets.xcassets */,
+				275B63121DD0607800C8525A /* smb_coin.wav */,
 				A18E7CF11DCCFCB300EEC7F3 /* LaunchScreen.storyboard */,
 				A18E7CF41DCCFCB300EEC7F3 /* Info.plist */,
 			);
@@ -251,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275B63131DD0607800C8525A /* smb_coin.wav in Resources */,
 				27ABA1701DCF046000D93326 /* heart.png in Resources */,
 				A18E7CEE1DCCFCB300EEC7F3 /* Main.storyboard in Resources */,
 				A1CBFC681DCD514B00E788AF /* LLPIXEL3.ttf in Resources */,
@@ -258,6 +265,7 @@
 				A18E7CF01DCCFCB300EEC7F3 /* Assets.xcassets in Resources */,
 				A1CBFC6A1DCD517A00E788AF /* marble.png in Resources */,
 				A18E7CF31DCCFCB300EEC7F3 /* LaunchScreen.storyboard in Resources */,
+				275B63111DD05F6200C8525A /* millionaire.mp3 in Resources */,
 				A18E7CE71DCCFCB300EEC7F3 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
