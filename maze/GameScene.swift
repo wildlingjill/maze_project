@@ -119,6 +119,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.childNode(withName: "heart_" + String(i))?.removeFromParent()
                 print("You touched!")
                 second = second! + 3.0
+                score = score + 5
+                scoreLabel.text = String(score)
             }
         }
         
@@ -126,6 +128,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             winLabel.isHidden = false
             audioPlayer_theme.stop()
             player.physicsBody!.affectedByGravity = false
+            score = score + 10
+            scoreLabel.text = String(score)
 
         }
     }
