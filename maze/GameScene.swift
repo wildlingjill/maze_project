@@ -95,9 +95,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func increaseTimer(){
-        if second! >= 1.0{
+        if second! >= 1.0 && winLabel.isHidden == true{
             second = second! - 1.0
             timerLabel.text = String(describing: second!)
+        } else if second! >= 1.0 && winLabel.isHidden == false {
+            loseLabel.isHidden = true
+            player.physicsBody!.affectedByGravity = false
         } else {
             player.physicsBody!.affectedByGravity = false
             loseLabel.isHidden = false
