@@ -1,0 +1,6 @@
+{
+  "name": "WeMaze project",
+  "tagline": "",
+  "body": "### Teamname: Supernova\r\n- Jill Robinson\r\n- Minh Pham\r\n- Lun Li\r\n- Jagdip Singh\r\n\r\n### Description: Marble Maze Game\r\n- Uses accelerometer and gyroscope to roll marble through a maze by tilting the device.\r\n- Capturing hearts increases timer by +3 seconds. \r\n- Game project using coremotion, spritekit, gamescene. \r\n\r\n### Challenge & Next Step\r\n- Our biggest challenge currently is keeping score. \r\n- One of the challenges we overcame was alerting when the game ended & getting gamescene and view controller to communicate with one another. \r\n- Implement scoring system \r\n\r\n### Support or Contact\r\nHaving trouble with Pages? Check out our [documentation](https://help.github.com/pages) or [contact support](https://github.com/contact) and we’ll help you sort it out.",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
